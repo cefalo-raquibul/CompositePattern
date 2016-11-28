@@ -4,6 +4,7 @@ import com.cefalo.compositepattern.containers.FieldGroup;
 import com.cefalo.compositepattern.containers.MyForm;
 import com.cefalo.compositepattern.formelements.EmailInputElement;
 import com.cefalo.compositepattern.formelements.MultiChoiceElement;
+import com.cefalo.compositepattern.formelements.NumberInputElement;
 import com.cefalo.compositepattern.formelements.TextInputElement;
 
 import java.util.Arrays;
@@ -28,9 +29,13 @@ public class Main {
         addressgroup.addElement(city);
         addressgroup.addElement(country);
 
+        NumberInputElement numberInputElement = new NumberInputElement();
+        numberInputElement.setNumberText("123");
+
         MyForm form = new MyForm();
         form.addElement(name);
         form.addElement(addressgroup);
+        form.addElement(numberInputElement);
 
 
         firstName.setTextData("first");
